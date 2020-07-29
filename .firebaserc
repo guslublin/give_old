@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "give-db": {
+      "hosting": {
+        "give": [
+          "give-db"
+        ]
+      }
+    }
+  }
+}

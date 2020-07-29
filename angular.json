@@ -31,7 +31,10 @@
               "src/styles.sass",
               "node_modules/semantic-ui-css/semantic.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/semantic-ui-css/semantic.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -122,8 +125,13 @@
               "devServerTarget": "give:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "give"
 }
