@@ -1,0 +1,13 @@
+{
+  "appId": "com.giveappsystem.www.app",
+  "appName": "give",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist/give",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
