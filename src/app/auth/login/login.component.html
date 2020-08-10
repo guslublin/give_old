@@ -1,5 +1,6 @@
 <br>
 <br>
+
 <div class="ui container">
   <div class="ui raised very padded text container segment">
 
@@ -11,34 +12,75 @@
     <br>
 
     <div class="ui container">
-      <div class="ui transparent input">
-        <input type="email" placeholder="Email">
-      </div>
+      <h3 class="ui center aligned header">Welcome to Give</h3>
     </div>
 
     <br>
     <br>
-
-    <div class="ui container">
-      <div class="ui transparent input">
-        <input type="password" placeholder="Password">
+    <form class="ui form">
+      <div class="ui center aligned container">
+        <div class="ui transparent input">
+          <input type="email" name="email" placeholder="Email..">
+        </div>
       </div>
-    </div>
+      <br>
+      <br>
+      <div class="ui center aligned container">
+        <div class="ui transparent input">
+          <input type="password" name="password" placeholder="Password..">
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="ui center aligned container">
+        <button class="ui button violet" type="submit">Login</button>
+      </div>
+      <br>
+      <br>
+      <div class="ui center aligned container">
+        <button class="ui black button">
+          <i class="user icon"></i>
+          Register
+        </button>
+      </div>
+      <br>
+      <br>
+      <div class="ui center aligned container">
+        <button class="ui google plus button">
+          <i class="google icon"></i>
+          Sign in with Google
+        </button>
+      </div>
 
-    <br>
-    <br>
+    </form>
 
-    <div class="ui three column doubling grid container">
+
+    <!-- <div class="ui center aligned container">
+      <button class="ui google plus button">
+        <i class="google icon"></i>
+        Ingresar con Google
+      </button>
+    </div> -->
+
+    <!-- <div class="ui six column doubling grid container">
       <div class="column">
-          <button class="ui right floated violet button">Login</button>
       </div>
       <div class="column">
-          <a class="ui teal button" [routerLink]="['/register']">Register</a>
       </div>
-    </div>
+      <div class="column">
+        <button class="ui right floated violet button">Ingresar con Google <i class="right floated google icon"></i></button>
+      </div>
+      <div class="column">
+        <a class="ui teal button" [routerLink]="['/register']">Register</a>
+      </div>
+    </div> -->
 
   </div>
 </div>
+<br>
+<br>
+
+
 
 <!-- <h3 class="ui center aligned header">Doubling Grid Container</h3> -->
 

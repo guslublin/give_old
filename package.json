@@ -23,7 +23,7 @@
     "@capacitor/android": "^2.4.0",
     "@capacitor/angular": "^1.0.2",
     "@capacitor/core": "^2.4.0",
-    "firebase": "^7.17.1",
+    "firebase": "^7.17.2",
     "jquery": "^3.5.1",
     "rxjs": "~6.5.5",
     "semantic-ui-css": "^2.4.1",
