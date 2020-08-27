@@ -1,0 +1,19 @@
+<div class="ui menu" *ngIf="user$ | async as user">
+  <div class="item" [routerLink]="['/home']">
+    <i class="home icon violet"></i>
+  </div>
+  <div class="item" [routerLink]="['/login']">
+    <i class="search icon violet"></i>
+  </div>
+  <div class="item right floated">
+    {{ user?.email }}
+  </div>
+  <div class="item right floated">
+    Active: {{ user?.emailVerified }}
+  </div>
+  <div class="item right floated">
+    <!-- <i class="cogs icon purple"></i> -->
+    <a (click)="onLogout()"><i class="cogs icon purple"></i></a>
+  </div>
+</div>
+<br>

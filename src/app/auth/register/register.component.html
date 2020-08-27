@@ -1,5 +1,6 @@
 <br>
 <br>
+
 <div class="ui container">
   <div class="ui raised very padded text container segment">
 
@@ -8,27 +9,52 @@
     </div>
 
     <br>
+    <br>
 
-<br>
     <div class="ui container">
-      <h3 class="ui center aligned header">Register</h3>
-    </div>
-<br>
-  <br>
-
-
-    <div class="ui six column doubling grid container">
-      <div class="column">
-      </div>
-      <div class="column">
-      </div>
-      <div class="column">
-          <button class="ui right floated pink button" [routerLink]="['/login']">Login</button>
-      </div>
-      <div class="column">
-          <a class="ui black button" [routerLink]="['/home']">Home</a>
-      </div>
+      <h3 class="ui center aligned header">Join to give</h3>
     </div>
 
+    <br>
+    <br>
+
+    <form [formGroup]="registerForm" class="ui form" (ngSubmit)="onRegister()">
+
+      <div class="ui center aligned container">
+        <div class="ui transparent input">
+          <input type="email" name="email" placeholder="Email.." formControlName="email" required>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      <div class="ui center aligned container">
+        <div class="ui transparent input">
+          <input type="password" name="password" placeholder="Password.." formControlName="password" required>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      <div class="ui center aligned container">
+        <div class="ui buttons">
+          <button type="submit" class="ui button violet">Join us</button>
+          <div class="or"></div>
+          <a class="ui button purple" [routerLink]="['/login']">Login</a>
+        </div>
+      </div>
+      <br>
+      <br>
+
+
+      <div class="ui center aligned container">
+        <button class="ui red button">
+          <i class="google icon"></i>
+          Login with Google
+        </button>
+      </div>
+    </form>
   </div>
 </div>
+<br>
+<br>

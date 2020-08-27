@@ -12,271 +12,55 @@
     <br>
 
     <div class="ui container">
-      <h3 class="ui center aligned header">Welcome to Give</h3>
+      <h3 class="ui center aligned header">Welcome to give</h3>
     </div>
 
     <br>
     <br>
-    <form class="ui form">
+
+    <form [formGroup]="loginForm" class="ui form" (ngSubmit)="onLogin()">
+
       <div class="ui center aligned container">
         <div class="ui transparent input">
-          <input type="email" name="email" placeholder="Email..">
+          <input type="email" name="email" placeholder="Email.." formControlName="email">
         </div>
       </div>
       <br>
       <br>
+
       <div class="ui center aligned container">
         <div class="ui transparent input">
-          <input type="password" name="password" placeholder="Password..">
+          <input type="password" name="password" placeholder="Password.." formControlName="password">
         </div>
       </div>
       <br>
       <br>
+
       <div class="ui center aligned container">
-        <button class="ui button violet" type="submit">Login</button>
+        <div class="ui buttons">
+          <button type="submit" class="ui button purple">Login</button>
+          <div class="or"></div>
+          <a class="ui button violet" [routerLink]="['/register']">Join us</a>
+        </div>
       </div>
       <br>
       <br>
+
       <div class="ui center aligned container">
-        <button class="ui black button">
-          <i class="user icon"></i>
-          Register
-        </button>
+        <button class="ui purple basic button" [routerLink]="['/forgot-password']">Forgot password?</button>
       </div>
       <br>
       <br>
+
       <div class="ui center aligned container">
-        <button class="ui google plus button">
+        <button class="ui red button" (click)="onGoogleLogin()">
           <i class="google icon"></i>
-          Sign in with Google
+          Login with Google
         </button>
       </div>
 
     </form>
-
-
-    <!-- <div class="ui center aligned container">
-      <button class="ui google plus button">
-        <i class="google icon"></i>
-        Ingresar con Google
-      </button>
-    </div> -->
-
-    <!-- <div class="ui six column doubling grid container">
-      <div class="column">
-      </div>
-      <div class="column">
-      </div>
-      <div class="column">
-        <button class="ui right floated violet button">Ingresar con Google <i class="right floated google icon"></i></button>
-      </div>
-      <div class="column">
-        <a class="ui teal button" [routerLink]="['/register']">Register</a>
-      </div>
-    </div> -->
-
   </div>
 </div>
 <br>
 <br>
-
-
-
-<!-- <h3 class="ui center aligned header">Doubling Grid Container</h3> -->
-
-<!--
-<br>
-<br>
-
-
-<h1 class="ui center aligned header">Responsive UI Examples</h1>
-
-
-<h2 class="ui center aligned header">Basic Responsive</h2>
-
-
-<h3 class="ui center aligned header">Container</h3>
-<div class="ui container">
-  <div class="ui segments">
-    <div class="ui segment">Content</div>
-    <div class="ui segment">Content</div>
-    <div class="ui segment">Content</div>
-    <div class="ui segment">Content</div>
-  </div>
-</div>
-<h3 class="ui center aligned header">Text Container</h3>
-<div class="ui text container">
-  <div class="ui segments">
-    <div class="ui segment">Content</div>
-    <div class="ui segment">Content</div>
-    <div class="ui segment">Content</div>
-    <div class="ui segment">Content</div>
-  </div>
-</div>
-
-<h3 class="ui center aligned header">Stackable Grid</h3>
-<div class="ui two column stackable grid">
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="three column row">
-    <div class="column">
-      <div class="ui segment">Content</div>
-    </div>
-    <div class="column">
-      <div class="ui segment">Content</div>
-    </div>
-    <div class="column">
-      <div class="ui segment">Content</div>
-    </div>
-  </div>
-  <div class="ten wide column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="six wide column">
-    <div class="ui segment">Content</div>
-  </div>
-</div>
-
-
-<h3 class="ui center aligned header">Doubling Grid</h3>
-<div class="ui three column doubling grid">
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-</div>
-
-<h3 class="ui center aligned header">Doubling Stackable Grid</h3>
-<div class="ui three column doubling stackable grid">
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-</div>
-
-<h3 class="ui center aligned header">Nested Stackable Grid</h3>
-<div class="ui two column grid">
-  <div class="column">
-    <div class="ui stackable doubling two column grid">
-      <div class="column">
-        <div class="ui segment">Content</div>
-      </div>
-      <div class="column">
-        <div class="ui segment">Content</div>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="ui stackable doubling three column grid">
-      <div class="column">
-        <div class="ui segment">Content</div>
-      </div>
-      <div class="column">
-        <div class="ui segment">Content</div>
-      </div>
-      <div class="column">
-        <div class="ui segment">Content</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<h3 class="ui center aligned header">Stackable Grid Container</h3>
-<div class="ui two column stackable grid container">
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-</div>
-
-
-<h3 class="ui center aligned header">Doubling Grid Container</h3>
-<div class="ui three column doubling grid container">
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-</div>
-
-<h3 class="ui center aligned header">Doubling Stackable Grid Container</h3>
-<div class="ui three column doubling stackable grid container">
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-  <div class="column">
-    <div class="ui segment">Content</div>
-  </div>
-</div> -->
