@@ -8,6 +8,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
+import { AuthService } from './auth/services/auth.service';
+import { CanEditGuard } from './auth/guards/can-edit.guard';
+import { CanAdminGuard } from './auth/guards/can-admin.guard';
+import { CanSuscriptorGuard } from './auth/guards/can-suscriptor.guard';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +20,12 @@ import { AngularFireModule } from '@angular/fire';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, 
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [AuthService, CanEditGuard, CanAdminGuard, CanSuscriptorGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

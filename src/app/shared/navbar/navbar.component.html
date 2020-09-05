@@ -2,15 +2,18 @@
   <div class="item" [routerLink]="['/home']">
     <i class="home icon violet"></i>
   </div>
-  <div class="item" [routerLink]="['/login']">
+  <div class="item">
     <i class="search icon violet"></i>
   </div>
-  <div class="item right floated">
+  <div class="item">
     {{ user?.email }}
   </div>
-  <div class="item right floated">
+
+
+
+  <!-- <div class="item right floated">
     Active: {{ user?.emailVerified }}
-  </div>
+  </div> -->
   <div class="item right floated">
     <!-- <i class="cogs icon purple"></i> -->
     <a (click)="onLogout()"><i class="cogs icon purple"></i></a>

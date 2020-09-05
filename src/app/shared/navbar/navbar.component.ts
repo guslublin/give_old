@@ -8,7 +8,6 @@ import { User } from '../../shared/models/user.interface';
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.sass'],
-  providers: [AuthService]
 })
 export class NavbarComponent implements OnInit {
   public isLogged = false;

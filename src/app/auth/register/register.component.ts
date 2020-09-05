@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.sass'],
-  providers: [AuthService]
 })
 export class RegisterComponent implements OnInit {
 
@@ -20,12 +19,6 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-
-  // para enviar mail de confirmación
-  // onSendEmail(): void {
-  //   this.authSvc.sendVerificationEmail();
-  // }
 
   async onRegister() {
     const { email, password } = this.registerForm.value;

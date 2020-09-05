@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.sass'],
-  providers: [AuthService]
 })
 export class LoginComponent implements OnInit {
 
@@ -19,15 +18,6 @@ export class LoginComponent implements OnInit {
   constructor(private authSvc: AuthService, private router: Router) { }
 
   ngOnInit(): void {
-  }
-
-  async onGoogleLogin() {
-    try {
-      this.authSvc.loginGoogle();
-      this.router.navigate(['/home']);
-    } catch (error) {
-      console.log(error);
-    }
   }
 
   async onLogin() {
